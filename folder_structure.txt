@@ -3,11 +3,8 @@ signlang/
 │  ├─ videos/                    # mp4 files named by video_id
 │  ├─ missing.txt                # one video_id per line
 │  └─ WLASL_v0.3.json            # gloss definitions and instances
-├─ configs/
-│  └─ default.yaml               # hyperparams/config (optional)
 ├─ preprocess/
-│  ├─ extract_landmarks.py       # MediaPipe holistic -> .npz sequences
-│  └─ utils.py                   # video IO, bbox crop, normalization
+│  └─ extract_landmarks.py       # MediaPipe holistic -> .npz sequences
 ├─ datasets/
 │  ├─ wlasl_parser.py            # parse JSON, map gloss<->id, splits
 │  └─ sign_dataset.py            # PyTorch Dataset for sequences; Pad/trim sequences to a fixed length; build adjacency once for ST-GCN.
