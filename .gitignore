@@ -1,2 +1,18 @@
 # The directory with the data files
 data/ 
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Model checkpoints
+checkpoints/
+*.pth
+*.pt
