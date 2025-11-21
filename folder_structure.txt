@@ -1,0 +1,22 @@
+signlang/
+├─ data/
+│  ├─ videos/                    # mp4 files named by video_id
+│  ├─ missing.txt                # one video_id per line
+│  └─ WLASL_v0.3.json            # gloss definitions and instances
+├─ configs/
+│  └─ default.yaml               # hyperparams/config (optional)
+├─ preprocess/
+│  ├─ extract_landmarks.py       # MediaPipe holistic -> .npz sequences
+│  └─ utils.py                   # video IO, bbox crop, normalization
+├─ datasets/
+│  ├─ wlasl_parser.py            # parse JSON, map gloss<->id, splits
+│  └─ sign_dataset.py            # PyTorch Dataset for sequences; Pad/trim sequences to a fixed length; build adjacency once for ST-GCN.
+├─ models/
+│  ├─ stgcn.py                   # ST-GCN implementation
+│  ├─ transformer.py             # Transformer encoder head
+│  └─ stgcn_transformer.py       # combined model (stgcn + transformer)
+├─ train.py                      # full training loop for SLT
+├─ evaluate.py                   # validation/test
+├─ realtime_infer.py             # webcam/video real-time demo ...
+├─ requirements.txt
+└─ README.md
