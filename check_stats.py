@@ -67,7 +67,6 @@ def get_video_stats(video_folder):
     print("="*30)
     print(f"Shortest video file: {os.path.basename(shortest_file)}")
     print(f"Longest video file:  {os.path.basename(longest_file)}")
-    print(f"Count of Missing videos:  {count}")
 
 if __name__ == "__main__":
     # Make sure this points to your actual video folder
